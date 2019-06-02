@@ -1,4 +1,4 @@
-# smtc
+# SMTC
 
 ## Project setup
 ```

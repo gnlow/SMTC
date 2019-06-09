@@ -1,28 +1,49 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>
+      SMTC
+    </h1>
+    <NavBar :contents="nav"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import NavBar from './components/NavBar.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    NavBar
+  },
+  data(){
+    return {
+      nav: [
+        {
+          text: "SMTC"
+        },
+        {
+          text: "대회 소개"
+        },
+        {
+          text: "투표 참여"
+        }
+      ]
+    };
   }
 }
 </script>
 
-<style>
+<style lang="scss">
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  /* font-family: 'Avenir', Helvetica, Arial, sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: white;
+  padding: 5px;
+  background-image: url("./assets/bg_waltz.png");
+  background-size: 100%;
+  display: flex;
+  flex-direction: column;
 }
 </style>

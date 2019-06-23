@@ -1,7 +1,7 @@
 <template>
   <ul>
     <li v-for="content in contents">
-      {{ content.text }}
+        {{ content.text }}
     </li>
   </ul>
 </template>
@@ -20,11 +20,11 @@
   ul {
     list-style-type: none;
     padding: 0;
-    width: 100%;
+    float: right;
   }
   li {
     display: inline-block;
-    margin: 0 10px;
+    margin: 0 30px;
     float: left;
   }
 </style>

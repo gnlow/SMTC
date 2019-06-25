@@ -44,21 +44,31 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color: white;
-    padding: 5px;
     display: flex;
     flex-direction: column;
 
     background-image: url("./assets/bg_waltz.png");
     background-size: 100%;
+
+    height: 100%;
+
+
   }
   #title {
     display: inline-block;
-    margin: 1em 1em;
+    margin: 0.8em 0.8em;
     float: left;
   }
   nav {
     font-size: 1.5em;
-    margin: 0 1em;
+    padding: 0 1em;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+  }
+  nav NavBar {
+    float: right;
   }
 </style>

@@ -38,14 +38,16 @@
     display: inline-block;
     margin: 0.8em 1em;
     float: left;
+
+    height: 1em;
   }
   hr {
-    height: .25rem;
+    height: 0.15em;
     width: 100%;
     margin: 0;
-    background: tomato;
+    background: darkviolet;
     border: none;
-    top: 0.5rem;
+    top: 0.2em;
     position: relative;
   }
   li:enabled {

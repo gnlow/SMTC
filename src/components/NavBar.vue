@@ -36,10 +36,10 @@
   }
   li {
     display: inline-block;
-    margin: 0.8em 1em;
+    margin: 0.5em 0.8em;
     float: left;
 
-    height: 1em;
+    height: 1.5em;
   }
   hr {
     height: 0.15em;
@@ -47,7 +47,7 @@
     margin: 0;
     background: darkviolet;
     border: none;
-    top: 0.2em;
+    top: 0.03em;
     position: relative;
   }
   li:enabled {

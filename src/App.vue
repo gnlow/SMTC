@@ -2,7 +2,7 @@
   <div id="app">
     <nav>
       <div id="smtc">
-        SMTC
+        <img src="./assets/logo.svg">
       </div>
       <NavBar :contents="nav"/>
     </nav>
@@ -81,6 +81,9 @@
   display: inline-block;
   margin: 0.5em 0.8em;
   float: left;
+}
+img {
+  height: 1.5rem;
 }
 nav {
   font-size: 1.5em;

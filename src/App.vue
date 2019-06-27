@@ -8,7 +8,10 @@
     </nav>
     <div id="main">
       <Main title='"너의 코딩을 보여줘"' subtitle="쇼미더코딩 SMTC는 여러분만을 위한 대회입니다." id="area1">
-        꾸꾸꾺꾸꾸꾸꾸꾸꾸꾸꾸
+        <h1>
+          꾸꾸꾺꾸꾸꾸꾸꾸꾸꾸꾸
+        </h1>
+
       </Main>
       <Main title='대회 참가하기' subtitle="쇼미더코딩에 참가하시려면 아래를 참고해 주세요." id="area2">
         <h1>예선전 작품 주제</h1>
@@ -70,8 +73,9 @@
   flex-direction: column;
 
   background-image: url("./assets/bg_coding.png");
-  background-size: 100%;
+  background-size: 200%;
   background-attachment: fixed;
+  background-position: center;
 }
 #smtc {
   display: inline-block;
@@ -87,11 +91,29 @@ nav {
   width: 100%;
   background-color: white;
 }
-nav NavBar {
+.navbar {
   float: right;
 }
 #main {
   margin-top: 4em;
-  //padding: 1em;
+}
+
+@media all and (max-width:556px) {
+  .navbar, #smtc {
+    float: none;
+  }
+}
+@media all and (max-width:455px) {
+  .navbar {
+    font-size: 0.8em;
+  }
+}
+@media all and (max-width:373px) {
+  .navbar {
+    display: none;
+  }
+  .content {
+    padding: 1rem !important;
+  }
 }
 </style>

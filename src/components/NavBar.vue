@@ -1,5 +1,5 @@
 <template>
-  <ul>
+  <ul class="navbar">
     <li v-for="(content, index) in contents" @click="movePage(index)">
       <a :href="content.href">
         {{ content.text }}
@@ -34,7 +34,6 @@
     list-style-type: none;
     padding: 0;
     margin: 0;
-    float: right;
   }
   li {
     display: inline-block;

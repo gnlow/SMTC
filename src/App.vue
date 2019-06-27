@@ -7,10 +7,19 @@
       <NavBar :contents="nav"/>
     </nav>
     <div id="main">
-      <Main 
-      title='"너의 코딩을 보여줘"' 
-      subtitle="쇼미더코딩 SMTC는 여러분만을 위한 대회입니다."
-      content="꾸꾸꾺꾸꾸꾸꾸꾸꾸꾸꾸"/>
+      <Main title='"너의 코딩을 보여줘"' subtitle="쇼미더코딩 SMTC는 여러분만을 위한 대회입니다.">
+        꾸꾸꾺꾸꾸꾸꾸꾸꾸꾸꾸
+      </Main>
+      <Main title='대회 참가하기' subtitle="쇼미더코딩에 참가하시려면 아래를 참고해 주세요.">
+        <h1>예선전 작품 주제</h1>
+        귀여운 고양이
+        <h1>예선전 참여 기간</h1>
+        2019년 01월 01일 ~ 2019년 01월 02일
+        <h1>신청 양식</h1>
+        엔트리 아이디, (한국) 나이, 이메일 주소, 예선 작품 링크, 설명
+        <h1>신청하기</h1>
+        안받습니당ㅋ
+      </Main>
     </div>
   </div>
 </template>
@@ -47,7 +56,7 @@
 </script>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,700,900&display=swap');
 #app {
   font-family: 'Noto Sans KR', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -58,8 +67,7 @@
 
   background-image: url("./assets/bg_coding.png");
   background-size: 100%;
-
-  height: 100%;
+  background-attachment: fixed;
 }
 #smtc {
   display: inline-block;

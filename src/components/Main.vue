@@ -9,7 +9,7 @@
       </div>
     </div>
     <div class="content">
-      {{ content }}
+      <slot/>
     </div>
   </div>
 </template>
@@ -27,8 +27,7 @@
     },
     props: {
       title: String,
-      subtitle: String,
-      content: String
+      subtitle: String
     }
   }
 </script>
@@ -57,7 +56,15 @@
   background-color: gainsboro;
 
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 1.5rem;
   padding: 3rem;
+  text-align: left;
+}
+
+//For slot content
+h1 {
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 0;
 }
 </style>

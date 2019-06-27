@@ -7,7 +7,10 @@
       <NavBar :contents="nav"/>
     </nav>
     <div id="main">
-      <Main title='"너의 코딩을 보여줘"' />
+      <Main 
+      title='"너의 코딩을 보여줘"' 
+      subtitle="쇼미더코딩 SMTC는 여러분만을 위한 대회입니다."
+      content="꾸꾸꾺꾸꾸꾸꾸꾸꾸꾸꾸"/>
     </div>
   </div>
 </template>
@@ -44,7 +47,7 @@
 </script>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,900&display=swap');
 #app {
   font-family: 'Noto Sans KR', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -77,6 +80,6 @@ nav NavBar {
 }
 #main {
   margin-top: 4em;
-  padding: 1em;
+  //padding: 1em;
 }
 </style>

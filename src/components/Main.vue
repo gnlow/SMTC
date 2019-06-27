@@ -27,7 +27,8 @@
     },
     props: {
       title: String,
-      subtitle: String
+      subtitle: String,
+      anchor: String
     }
   }
 </script>
@@ -38,7 +39,8 @@
   color: white;
   width: 100%;
   text-align: center;
-  margin: 5rem 0;
+  padding: 8rem 0;
+  margin: -3rem 0;
 }
 
 .title {

@@ -1,7 +1,9 @@
 <template>
   <ul>
     <li v-for="(content, index) in contents" @click="movePage(index)">
-      {{ content.text }}
+      <a :href="content.href">
+        {{ content.text }}
+      </a>
       <hr v-if="nowPage == index" />
     </li>
   </ul>
@@ -52,5 +54,14 @@
   }
   li:enabled {
     color: red;
+  }
+  a{
+    &:link {text-decoration: none; color: black;};
+    &.anchor {
+      display: block;
+      position: relative;
+      top: -250px;
+      visibility: hidden;
+    }
   }
 </style>

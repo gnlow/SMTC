@@ -7,10 +7,10 @@
       <NavBar :contents="nav"/>
     </nav>
     <div id="main">
-      <Main title='"너의 코딩을 보여줘"' subtitle="쇼미더코딩 SMTC는 여러분만을 위한 대회입니다.">
+      <Main title='"너의 코딩을 보여줘"' subtitle="쇼미더코딩 SMTC는 여러분만을 위한 대회입니다." id="area1">
         꾸꾸꾺꾸꾸꾸꾸꾸꾸꾸꾸
       </Main>
-      <Main title='대회 참가하기' subtitle="쇼미더코딩에 참가하시려면 아래를 참고해 주세요.">
+      <Main title='대회 참가하기' subtitle="쇼미더코딩에 참가하시려면 아래를 참고해 주세요." id="area2">
         <h1>예선전 작품 주제</h1>
         귀여운 고양이
         <h1>예선전 참여 기간</h1>
@@ -38,16 +38,20 @@
       return {
         nav: [
         {
-          text: "개요"
+          text: "개요",
+          href: "#area1"
         },
         {
-          text: "참가"
+          text: "참가",
+          href: "#area2"
         },
         {
-          text: "작품"
+          text: "작품",
+          href: "#area3"
         },
         {
-          text: "영상 및 웹툰"
+          text: "영상 및 웹툰",
+          href: "#area4"
         },
         ]
       };

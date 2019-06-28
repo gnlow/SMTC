@@ -1,12 +1,51 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <nav>
+      <div id="smtc">
+        <img src="./assets/logo.svg">
+      </div>
+      <NavBar :contents="nav"/>
+    </nav>
+    <div id="main">
+      <router-view/>
     </div>
-    <router-view/>
   </div>
 </template>
+
+<script>
+  import NavBar from './components/NavBar.vue'
+  import Main from './components/Main.vue'
+
+  export default {
+    name: 'app',
+    components: {
+      NavBar,
+      Main
+    },
+    data(){
+      return {
+        nav: [
+        {
+          text: "개요",
+          link: "/info"
+        },
+        {
+          text: "참가",
+          link: "/register"
+        },
+        {
+          text: "작품",
+          link: "/project"
+        },
+        {
+          text: "영상 및 웹툰",
+          link: "/more"
+        },
+        ]
+      };
+    }
+  }
+</script>
 
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,700,900&display=swap');

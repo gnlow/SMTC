@@ -1,10 +1,10 @@
 <template>
   <ul class="navbar">
     <li v-for="(content, index) in contents" @click="movePage(index)">
-      <a :href="content.href">
+      <router-link :to="content.link" active-class="active">
         {{ content.text }}
-      </a>
-      <hr v-if="nowPage == index" />
+        <hr/>
+      </router-link>
     </li>
   </ul>
 </template>
@@ -43,6 +43,7 @@
     height: 1.5em;
   }
   hr {
+    display: none;
     height: 0.15em;
     width: 100%;
     margin: 0;
@@ -50,6 +51,9 @@
     border: none;
     top: 0.03em;
     position: relative;
+  }
+  .active hr {
+    display: block;
   }
   li:enabled {
     color: red;

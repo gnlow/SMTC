@@ -1,6 +1,6 @@
 <template>
   <ul class="navbar">
-    <li v-for="(content, index) in contents" @click="movePage(index)">
+    <li v-for="(content, index) in contents" @click="movePage(index)" :key="content.link">
       <router-link :to="content.link" active-class="active">
         {{ content.text }}
         <hr/>

@@ -33,11 +33,11 @@
         },
         {
           text: "작품",
-          link: "/project"
+          link: "/works"
         },
         {
           text: "영상 및 웹툰",
-          link: "/more"
+          link: "/webtoon"
         },
         ]
       };

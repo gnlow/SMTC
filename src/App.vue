@@ -41,12 +41,22 @@
         },
         ]
       };
+    },
+    beforeCreate: function() {
+        document.body.className = 'home';
     }
   }
 </script>
 
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,700,900&display=swap');
+body.home {
+  background-image: url("./assets/bg_coding.png");
+  background-size: 200%;
+  background-attachment: fixed;
+  background-position: center;
+}
+
 #app {
   font-family: 'Noto Sans KR', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -55,10 +65,7 @@
   display: flex;
   flex-direction: column;
 
-  background-image: url("./assets/bg_coding.png");
-  background-size: 200%;
-  background-attachment: fixed;
-  background-position: center;
+  height: 100%;
 }
 #smtc {
   display: inline-block;
@@ -81,25 +88,23 @@ nav {
   float: right;
 }
 #main {
-  margin-top: 4em;
+  margin-top: 2.5em;
+}
+.pagearea {
+  height: 100%;
 }
 
 @media all and (max-width:563px) {
   .navbar, #smtc {
     float: none;
   }
+  #main {
+    margin-top: 7em;
+  }
 }
 @media all and (max-width:455px) {
   .navbar {
     font-size: 0.8em;
-  }
-}
-@media all and (max-width:373px) {
-  .navbar {
-    display: none;
-  }
-  .content {
-    padding: 1rem !important;
   }
 }
 </style>

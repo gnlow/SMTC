@@ -6,7 +6,7 @@
 		<h1>
 			2차
 		</h1>
-		<Thumb works-id="5bece16922321f320de51da8"/>
+		<Thumb works-id="5bece16922321f320de51da8" team="2"/>
 		
 	</Main>
 </template>

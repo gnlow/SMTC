@@ -1,7 +1,7 @@
 <template>
   <div class="thumb">
     <div class="thumbnail" :style="{backgroundImage: `url('${thumbnail}')`}"></div>
-    <div class="info">
+    <div class="info" :style="{backgroundColor: teamColor, color: Number(team)?'white':'black'}">
       {{workData.name}}
     </div>
   </div>
@@ -13,7 +13,16 @@
     data () {
       return {
         thumbnail: `https://playentry.org/uploads/thumb/${this.worksId.substring(0, 4)}/${this.worksId}.png`,
-          workData: {name: " "}
+          workData: {name: " "},
+          teamColor: [
+            "silver",
+            "#F70D1A",
+            "#FF5F00",
+            "#FFE302",
+            "#A6D608",
+            "#00AAEE",
+            "#9F00FF"
+          ][this.team]
       }
     },
     methods: {
@@ -27,7 +36,8 @@
       }
     },
     props: {
-      worksId: String
+      worksId: String,
+      team: String
     },
     mounted() {
       this.getData()
@@ -54,5 +64,6 @@
     width: 100%;
     padding: 0.5em 1em 0.5em 1em;
     box-sizing: border-box;
+    color: black;
   }
 </style>

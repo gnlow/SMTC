@@ -55,7 +55,7 @@
 }
 .content {
   color: black;
-  background-color: gainsboro;
+  background-color: rgb(233, 233, 233);
 
   font-weight: 400;
   font-size: 1.5rem;

@@ -24,6 +24,16 @@ export default new Router({
       path: '/register',
       name: 'register',
       component: () => import('./views/RegisterPage.vue')
+    },
+    {
+      path: '/works',
+      name: 'works',
+      component: () => import('./views/WorksPage.vue')
+    },
+    {
+      path: '/webtoon',
+      name: 'webtoon',
+      component: () => import('./views/WebtoonPage.vue')
     }
   ]
 })

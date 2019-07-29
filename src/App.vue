@@ -36,7 +36,7 @@
           link: "/works"
         },
         {
-          text: "영상 및 웹툰",
+          text: "웹툰",
           link: "/webtoon"
         },
         ]
@@ -105,6 +105,9 @@ nav {
 @media all and (max-width:455px) {
   .navbar {
     font-size: 0.8em;
+  }
+  .titlebox {
+    font-size: 0.5em;
   }
 }
 </style>

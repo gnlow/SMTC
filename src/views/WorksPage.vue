@@ -6,20 +6,34 @@
 		<h1>
 			2차
 		</h1>
-		<Thumb works-id="5bece16922321f320de51da8" team="2"/>
+		<ThumbRail :works="works"></ThumbRail>
 		
 	</Main>
 </template>
 
 <script>
 	import Main from '../components/Main.vue'
-	import Thumb from '../components/Thumb.vue'
+	import ThumbRail from '../components/ThumbRail.vue'
 
 	export default {
 		name: 'WorksPage',
 		components: {
 			Main, 
-			Thumb
+			ThumbRail
+		},
+		data(){
+			return {
+				works: [
+				"5d3ae6c19788527fe2663b2b",
+				"5bece16922321f320de51da8",
+				"5bece16922321f320de51da8",
+				"5bece16922321f320de51da8",
+				"5bece16922321f320de51da8",
+				"5bece16922321f320de51da8",
+				"5bece16922321f320de51da8",
+				"5bece16922321f320de51da8",
+				]
+			}
 		}
 	}
 </script>

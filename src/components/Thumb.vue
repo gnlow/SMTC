@@ -1,7 +1,7 @@
 <template>
-  <div class="thumb">
+  <div class="thumb" :style="{backgroundColor: teamColor}">
     <div class="thumbnail" :style="{backgroundImage: `url('${thumbnail}')`}"></div>
-    <div class="info" :style="{backgroundColor: teamColor, color: Number(team)?'white':'black'}">
+    <div :class="{info: true, overflow: this.width > 160}" :style="{color: Number(team)?'white':'black'}" ref="info">
       {{workData.name}}
     </div>
   </div>
@@ -22,7 +22,8 @@
             "#A6D608",
             "#00AAEE",
             "#9F00FF"
-          ][this.team]
+          ][this.team],
+          width: 0
       }
     },
     methods: {
@@ -32,7 +33,11 @@
           adapter: this.$jsonpAdapter
         }).then(res => {
           this.workData = res.data
+          this.$nextTick(this.getWidth)
         })
+      },
+      getWidth(){
+        this.width = this.$refs.info.clientWidth
       }
     },
     props: {
@@ -48,22 +53,44 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
   .thumb {
-    width: 10em;
-    box-shadow: 0 0 1em rgba(0, 0, 0, .2);
-    border-radius: 1em;
+    background-color: silver;
+    width: 10rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .2);
+    border-radius: 1rem;
     overflow: hidden;
+    display: inline-block;
+    margin: 1rem 0.5rem 1rem 0.5rem;
   }
   .thumbnail {
-    width: 10em;
-    height: 6em;
+    width: 10rem;
+    height: 6rem;
     background-size: cover;
     background-position: center;
   }
   .info {
-    background-color: silver;
-    width: 100%;
-    padding: 0.5em 1em 0.5em 1em;
+    min-width: 100%;
+    display: inline-block;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    font-size: 0.8em;
     box-sizing: border-box;
     color: black;
   }
+  .info.overflow {
+    animation: marquee 5s linear infinite;
+  }
+
+  @keyframes marquee {
+    0% {
+        transform: translate(0%, 0);
+    }    
+    50% {
+        transform: translate(-100%, 0);
+    }
+    50.001% {
+        transform: translate(100%, 0);
+    }
+    100% {
+        transform: translate(0%, 0);
+    }
+}
 </style>

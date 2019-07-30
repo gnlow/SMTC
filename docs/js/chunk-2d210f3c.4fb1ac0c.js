@@ -1,2 +1,2 @@
 (window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d210f3c"],{b9a0:function(t,n,e){"use strict";e.r(n);var a=function(){var t=this,n=t.$createElement,e=t._self._c||n;return e("Main",{staticClass:"webtoonarea",attrs:{title:"영상 및 웹툰",subtitle:"쇼미더코딩 웹툰 작가 '참외'가 만드는 웹툰과 공식 프로모션 영상을 확인하실 수 있습니다.",id:"area4"}},[e("h1",[t._v("\n\t\t영상\n\t")]),e("h1",[t._v("\n\t\t웹툰\n\t")])])},s=[],o=e("2614"),c={name:"WebtoonPage",components:{Main:o["a"]}},i=c,l=e("2877"),r=Object(l["a"])(i,a,s,!1,null,null,null);n["default"]=r.exports}}]);
-//# sourceMappingURL=chunk-2d210f3c-legacy.db13e71b.js.map
+//# sourceMappingURL=chunk-2d210f3c.4fb1ac0c.js.map

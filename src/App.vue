@@ -52,7 +52,7 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,700,900&display=swap');
 body.home {
   background-image: url("./assets/bg_coding.png");
-  background-size: 200%;
+  background-size: cover;
   background-attachment: fixed;
   background-position: center;
 }

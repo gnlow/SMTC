@@ -1,28 +1,23 @@
 <template>
   <div class="thumb" :style="{backgroundColor: teamColor}">
     <div class="thumbnail" :style="{backgroundImage: `url('${thumbnail}')`}"></div>
-    <div :class="{info: true, overflow: this.width > 160}" :style="{color: Number(team)?'white':'black'}" ref="info">
+    <div :class="{info: true, overflow: this.width > 160}" ref="info">
       {{workData.name}}
     </div>
   </div>
 </template>
 
 <script>
+  import members from '../team.json'
+
   export default {
     name: 'Thumb',
     data () {
       return {
         thumbnail: `https://playentry.org/uploads/thumb/${this.worksId.substring(0, 4)}/${this.worksId}.png`,
           workData: {name: " "},
-          teamColor: [
-            "silver",
-            "#F70D1A",
-            "#FF5F00",
-            "#FFE302",
-            "#A6D608",
-            "#00AAEE",
-            "#9F00FF"
-          ][this.team],
+          team: 0,
+          teamColor: "silver",
           width: 0
       }
     },
@@ -33,6 +28,16 @@
           adapter: this.$jsonpAdapter
         }).then(res => {
           this.workData = res.data
+          this.team = members.findIndex(a => a.some(b => b == this.workData.user.username)) + 1
+          this.teamColor = [
+            "silver",
+            "#F70D1A",
+            "#FF5F00",
+            "#FFE302",
+            "#A6D608",
+            "#00AAEE",
+            "#9F00FF"
+          ][this.team]
           this.$nextTick(this.getWidth)
         })
       },
@@ -41,8 +46,7 @@
       }
     },
     props: {
-      worksId: String,
-      team: String
+      worksId: String
     },
     mounted() {
       this.getData()

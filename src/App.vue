@@ -36,7 +36,7 @@
           link: "/works"
         },
         {
-          text: "영상 및 웹툰",
+          text: "웹툰",
           link: "/webtoon"
         },
         ]
@@ -52,7 +52,7 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,700,900&display=swap');
 body.home {
   background-image: url("./assets/bg_coding.png");
-  background-size: 200%;
+  background-size: cover;
   background-attachment: fixed;
   background-position: center;
 }
@@ -105,6 +105,9 @@ nav {
 @media all and (max-width:455px) {
   .navbar {
     font-size: 0.8em;
+  }
+  .titlebox {
+    font-size: 0.5em;
   }
 }
 </style>

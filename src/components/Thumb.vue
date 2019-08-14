@@ -1,10 +1,10 @@
 <template>
-  <div class="thumb" :style="{backgroundColor: teamColor}">
+  <a class="thumb" :title="workData.user.username || ' ' " :style="{backgroundColor: teamColor}" :href="workData.shortenUrl">
     <div class="thumbnail" :style="{backgroundImage: `url('${thumbnail}')`}"></div>
     <div :class="{info: true, overflow: this.width > 160}" ref="info">
       {{workData.name}}
     </div>
-  </div>
+  </a>
 </template>
 
 <script>
